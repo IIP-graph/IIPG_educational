@@ -1,0 +1,182 @@
+
+/* Responsive layout fixes */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-header,
+.site-header-main,
+.site-branding,
+.site-content,
+.content-area,
+.entry-content,
+.site-footer {
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Header banner */
+.site-branding img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Keep carousel content within its container */
+.image-carousel,
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.slide-title,
+.slide-text,
+.software-info,
+.reference,
+.availability {
+    overflow-wrap: anywhere;
+}
+
+/* Tablets and phones */
+@media screen and (max-width: 768px) {
+    .site-header-main {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-branding {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #site-header-menu,
+    #site-navigation {
+        width: 100%;
+    }
+
+    .primary-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .primary-menu li {
+        max-width: 100%;
+    }
+
+    .primary-menu a {
+        display: block;
+        padding: 10px;
+    }
+
+    #content,
+    #primary,
+    .content-area,
+    .entry-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .entry-content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .software-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .image-carousel,
+    .software-info {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .swiper {
+        width: 100%;
+        padding-bottom: 35px;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .swiper-slide img {
+        max-width: 100%;
+    }
+
+    .slide-title,
+    .slide-text {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: scale(0.75);
+    }
+
+    .site-footer {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .entry-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .entry-title {
+        overflow-wrap: anywhere;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: scale(0.6);
+    }
+
+    .reference ul {
+        padding-left: 20px;
+    }
+}
